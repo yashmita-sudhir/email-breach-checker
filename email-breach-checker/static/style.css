@@ -1,0 +1,92 @@
+/* Basic reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+}
+
+/* Center container */
+.container {
+    max-width: 450px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Page title */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Input field */
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Alerts */
+.alert {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Success / safe */
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Danger / breached */
+.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Breach cards */
+.breach-card {
+    background-color: #f0f0f0;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #dc3545;
+}
+
+.breach-card h3 {
+    margin: 0 0 5px 0;
+    color: #dc3545;
+}
+
+.breach-card p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #333;
+}

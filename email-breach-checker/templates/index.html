@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Breach Checker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Email Breach Checker</h1>
+
+        <form method="POST">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Check</button>
+        </form>
+
+        {% if result %}
+            {% if result.found %}
+                <div class="alert danger">
+                    ⚠️ {{ result.email }} found in {{ result.breaches|length }} breach(es)
+                </div>
+
+                {% for breach in result.breaches %}
+                    <div class="breach-card">
+                        <h3>{{ breach.Name }}</h3>
+                        <p><strong>Date:</strong> {{ breach.BreachDate }}</p>
+                        <p><strong>Data Exposed:</strong>
+                            {{ breach.DataClasses | join(", ") }}
+                        </p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="alert success">
+                    ✅ Good news! {{ result.email }} was not found in any known breaches.
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
